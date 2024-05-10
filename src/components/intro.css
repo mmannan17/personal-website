@@ -1,0 +1,25 @@
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent; /* Ensure background is transparent */
+    color: #ffffff; /* White color for visibility over dark background */
+    font-family: 'Google Sans ', monospace;
+    position: relative; /* Needed for z-index to take effect */
+    z-index: 2; /* Higher than the background */
+}
+  
+  .intro-container h1 {
+    font-size: 2vw; /* Larger text for the header */
+    color: rgba(181, 175, 240, 0.349);
+    margin-bottom: 25vw; /* Space below the header */
+    margin-left: 0.5vw;
+  }
+  
+  .intro-container p {
+    font-size: 17px;
+    color: rgb(6, 88, 42); /* Lighter text color for paragraph */
+    font-family: 'Google Sans ', monospace; /* Different font for the paragraph */
+  }

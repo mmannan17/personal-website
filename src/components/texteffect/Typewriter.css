@@ -1,0 +1,25 @@
+@keyframes blink {
+    from, to {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .typewriter-text {
+    display: inline-block;  /* Ensures the span can be styled with width, necessary for cursor simulation */
+    font-family: 'Google sans', monospace; /* Gives a typewriter-like font style */
+    position: relative;
+    padding-right: 10px;
+    color: #ffffff; /* Adds space at the end of the text for the cursor */
+  }
+  
+  .typewriter-text:after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    opacity: 0;  /* Starts hidden */
+    position: absolute;
+    right: 1;
+    
+  }

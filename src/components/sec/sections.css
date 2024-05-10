@@ -1,0 +1,31 @@
+/* sections.css */
+.section-container {
+    position: fixed;
+    top: 0;  /* Adjusted for top alignment */
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    background-color: transparent; /* Set background to transparent */
+    padding: 10px 20px;
+}
+
+.section-button {
+    font-size: 18px; /* Increased font size */
+    color: white;
+    background: transparent; /* Ensure buttons have a transparent background */
+    border: none; /* Remove borders */
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 0 10px; /* Space between buttons */
+    font-family: 'Google Sans', sans-serif; /* Using Google Sans */
+    text-transform: none; /* No text transformation, showing text as is */
+    font-weight: bold; /* Makes the text bold */
+    transition: color 0.3s, background-color 0.3s; /* Transition for interactive hover effect */
+}
+
+
+.section-button:hover {
+    color: #00ff00; /* Example hover color, change as needed */
+}

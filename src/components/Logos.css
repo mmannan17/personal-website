@@ -1,0 +1,28 @@
+.logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex; /* This will align both images in a row */
+    align-items: center; /* Center the logos vertically */
+    z-index: 1000; /* High z-index to keep it on top of other elements */
+}
+
+.linkedin-logo, .github-logo {
+    height: auto;
+    display: block; /* Removes extra space below the image */
+    margin-right: 25px; /* Adds space between the logos */
+
+}
+
+.linkedin-logo {
+    width: 50px; /* Adjust size as needed */
+    margin-left: 10px; /* Space from the left edge */
+}
+
+.github-logo {
+    width: 30px; /* Adjust size as needed */
+}
+
+.github-logo:hover{
+    color: greenyellow;
+}

@@ -1,0 +1,90 @@
+#about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px; /* Space from top of the page */
+  z-index: 100;
+}
+
+#about-section h1 {
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  color: rgb(11, 248, 43);
+  font-size: 40px;
+  padding-bottom: 10px; /* Space below the text */
+  z-index: 100;
+  margin-right: 65vw;
+}
+
+#about-section h1:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+   /* Relative to the parent's width */
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+}
+
+.about-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 75%;
+  padding: 20px;
+  margin-top: 1px; /* Space between title and content */
+  z-index: 100;
+}
+
+/* Adding pseudo-elements for the borders */
+.about-content::before, .about-content::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(4, 248, 16);
+  z-index: 110; /* Ensure it's above the content */
+}
+
+/* Custom vertical left border */
+.about-content::before {
+  left: 0;
+  top: 5%; /* Starts a bit from the top */
+  bottom: 60%; /* Ends a bit from the bottom */
+  width: 4px; /* Thickness of the border */
+}
+
+/* Custom horizontal top border */
+.about-content::after {
+
+  top: 3;
+  left: 0%; /* Starts a bit from the left */
+  right: 85%; /* Ends a bit from the right */
+  height: 4px; /* Thickness of the border */
+}
+
+
+.about-text {
+  color: rgb(253, 251, 251);
+  font-family: google sans,monospace;
+  font-weight: bold;
+  width: 70%;
+  font-size: 23px;
+  z-index: 100;
+  text-align: left;
+}
+
+.about-image {
+  width: 25%;
+  height: auto;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.about-image img {
+  width: 80%;
+  height: auto;
+  z-index: 100;
+}

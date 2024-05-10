@@ -1,0 +1,46 @@
+#binary-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  justify-content: center; /* Center digits horizontally */
+  z-index: 1; /* Ensure this is lower than your intro component */
+}
+html, body {
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+.binary-digit {
+  width: 20px; /* Smaller width to prevent overlap */
+  height: 12vw; /* Smaller height to match smaller width */
+  opacity: 0.7;
+  color: rgba(181, 175, 240, 0.349);
+  font-family: 'Google Sans', monospace;
+  font-weight: bold;
+  font-size: 19px; /* Adjust font size for better fit */
+  animation: moveUpDown 10s linear infinite;
+  position: absolute; /* Absolute positioning within the relative parent */
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(-100%);
+  }
+  50% {
+      transform: translateY(100%);
+  }
+}
+
+@keyframes flow {
+  from { top: -12vw; }
+  to { top: 100vh; } /* Adjust based on the height of your view */
+}

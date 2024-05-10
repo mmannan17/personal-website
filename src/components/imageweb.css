@@ -1,0 +1,46 @@
+/* Container settings */
+.container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between children evenly */
+    align-items: center; /* Centers children vertically */
+    padding: 10px; /* Padding around the container */
+}
+
+/* Content settings */
+.content {
+    flex: 1; /* Allows the text content to grow and push the image */
+    padding-right: 20px; /* Adds right padding to push the image slightly right from center */
+}
+
+/* Image settings */
+.my-image {
+    flex-grow: 0; /* Prevents the image from growing */
+    width: 40%; /* Image takes up 40% of the container width */
+    max-width: 300px; /* Ensures the image is not too large */
+    height: auto; /* Maintains the image aspect ratio */
+    z-index: 2; /* Ensures the image is above other elements if overlapping occurs */
+    margin-top: -7vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks children vertically on smaller screens */
+        align-items: center; /* Centers children horizontally */
+    }
+
+    .content {
+        padding-right: 80%; /* Removes padding on smaller screens */
+    }
+
+    .my-image {
+        width: 80%; /* Allows the image to take more space on smaller screens */
+        margin-top: 20px; /* Adds space between the text and image */
+    }
+}
+
+@media (max-width: 480px) {
+    .my-image {
+        margin-left: 10vw;
+    }
+}
