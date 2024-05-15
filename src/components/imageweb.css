@@ -4,6 +4,7 @@
     justify-content: space-between; /* Distributes space between children evenly */
     align-items: center; /* Centers children vertically */
     padding: 10px; /* Padding around the container */
+
 }
 
 /* Content settings */
@@ -19,7 +20,8 @@
     max-width: 300px; /* Ensures the image is not too large */
     height: auto; /* Maintains the image aspect ratio */
     z-index: 2; /* Ensures the image is above other elements if overlapping occurs */
-    margin-top: -7vw;
+    margin-top: 10vw;
+    border-radius: 100px;
 }
 
 /* Responsive adjustments */
@@ -39,8 +41,38 @@
     }
 }
 
+
+/* For tablets (screens between 480px and 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    .container {
+        flex-direction: column; /* Stack the elements vertically */
+        align-items: center; /* Ensure content is centered */
+        padding: 5px 10px; /* Adjust padding to fit tablet screens */
+    }
+
+    .content {
+        width: 100%; /* Full width to utilize screen space */
+        padding-right: 0; /* Remove right padding as it is now unnecessary */
+        text-align: center; /* Center-align the text for better aesthetics */
+    }
+
+    .my-image {
+        width: 60%; /* Adjust image width for balance between text and image */
+        margin-top: 15px; /* Sufficient space between text and image */
+        margin-left: 0; /* Align image centrally by removing left margin */
+    }
+}
+
+/* For mobile phones (screens less than 480px wide) */
+/* For mobile phones (screens less than 480px wide) */
 @media (max-width: 480px) {
     .my-image {
-        margin-left: 10vw;
+        width: 30%; /* Further reduce the image size to make it less dominating */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 10px; /* Sufficient spacing above the image */
+        margin-bottom: 10px; /* Adds space below the image for separation */
+        margin-left: auto; /* Center the image horizontally */
+        margin-right: auto; /* Center the image horizontally */
+        border-radius: 20px; /* Soften the corners with a smaller radius */
     }
 }

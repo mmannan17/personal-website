@@ -1,31 +1,105 @@
-/* sections.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .section-container {
-    position: fixed;
-    top: 0;  /* Adjusted for top alignment */
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    z-index: 100;
-    background-color: transparent; /* Set background to transparent */
-    padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 100;
+  background-color: black;
+  padding: 10px 20px;
 }
 
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  position: fixed;
+  top: 50px; /* Adjust as needed */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 101; /* Above other content */
+}
+
+/* Section Button */
 .section-button {
-    font-size: 18px; /* Increased font size */
-    color: white;
-    background: transparent; /* Ensure buttons have a transparent background */
-    border: none; /* Remove borders */
-    cursor: pointer;
-    padding: 10px 10px;
-    margin: 0 10px; /* Space between buttons */
-    font-family: 'Google Sans', sans-serif; /* Using Google Sans */
-    text-transform: none; /* No text transformation, showing text as is */
-    font-weight: bold; /* Makes the text bold */
-    transition: color 0.3s, background-color 0.3s; /* Transition for interactive hover effect */
+  font-size: 15px;
+  color: white;
+  background: transparent;
+  border: 2.75px solid rgba(181, 175, 240, 0.904);
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin: 5px; /* Reduced margin for better fit */
+  font-family: 'Google Sans', sans-serif;
+  text-transform: none;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
 }
-
 
 .section-button:hover {
-    color: #00ff00; /* Example hover color, change as needed */
+  background-color: #000000; /* Example hover background color */
+  color: rgb(181, 175, 240); /* Example hover text color */
+}
+
+.section-button:hover {
+  color: #c494e0; /* Example hover color, change as needed */
+}
+
+/* Media query for small screens */
+@media (max-width: 486px) {
+  .section-container {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 30px; /* Adjust padding */
+      padding-right: 30px;
+  }
+
+  .section-button {
+      font-size: 10px; /* Further reduce the font size for small screens */
+      padding: 8px; /* Adjust padding for better fit */
+      margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
+
+  .menu-icon {
+      width: 20px; /* Adjust size for smaller screens */
+      height: 20px; /* Adjust size for smaller screens */
+  }
+}
+
+/* For screens less than 768px wide */
+@media (min-width:481px ) and (max-width: 768px) {
+  .section-container {
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: center;
+      padding: 5px 10px;
+  }
+
+  .section-button {
+      font-size: 14px; /* Further reduce the font size for small screens */
+      padding: 10px 12px; /* Adjust padding to create larger tap targets */
+      margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
 }

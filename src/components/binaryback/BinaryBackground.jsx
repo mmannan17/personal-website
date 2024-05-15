@@ -21,7 +21,7 @@ const BinaryBackground = () => {
     function draw() {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Lighten the background slightly to see the "fade"
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(181, 175, 240, 0.349)'; // Using the color defined in .binary-digit
+      ctx.fillStyle = 'rgba(181, 175, 240, 0.904)'; // Using the color defined in .binary-digit
       ctx.font = `${fontSize}px 'Google Sans', monospace`; // Use the same font as in your CSS
 
       for (let i = 0; i < drops.length; i++) {

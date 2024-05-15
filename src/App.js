@@ -1,32 +1,36 @@
 import './App.css';
-import BinaryBackground from './components/binaryback/BinaryBackground';
-import Introduction from './components//Introduction';
-import Imageweb from './components/Imageweb';
-import Logos from './components/logos';
-import Section from './components/sec/sections';
-import About from './components/about/aboutsec';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './layout';
+import Home from './components/Pages/Home';
+import About from './components/Pages/aboutsec';
+import Projects from './components/Pages/project';
+import Experience from './components/Pages/experience';
+import Skills from './components/Pages/skills';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './components/Projectsec/project.css';
+import './components/Skillssec/skills.css';
+
+
+
 
 function App() {
   return (
-    
-    <div className="App">
-      <BinaryBackground />
-      <Logos/>
+      <div className="App">
+           <Router>
+              <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/experience" element={<Experience />}/>
+                    <Route path="/skills" element={<Skills />}/>
 
-      <Imageweb/>
-
-        <div className="text">
-
-          <Introduction/>
-
-        </div>
-        <Section/>
-        <About/>
-
-
-        
-    </div>
+                </Routes>
+              </Layout>
+           </Router>
+      </div>
   );
 }
 
-export default App; // Only one default export per module
+export default App;

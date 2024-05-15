@@ -1,0 +1,177 @@
+.skills-section {
+    padding-left: 34vw;
+    padding-right: 34vw;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Google Sans', monospace;
+    color: rgb(243, 246, 248);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.skill-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.836);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer; /* Add this line */
+}
+
+.skill-card:hover {
+    cursor: pointer; /* Ensure cursor pointer on hover */
+}
+
+.skill-card:hover .icon {
+    transform: translateY(-5px); /* Move the icon up slightly */
+    opacity: 1;
+}
+
+.skill-card .icon {
+    font-size: 2rem;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.flask-icon {
+    color: #ffffff;
+}
+
+.django-icon {
+    color: #47c022; /* Adjust the color for the Django icon */
+}
+
+.skill-card h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+
+.skill-card:hover h3 {
+    opacity: 1;
+    font-size: 19px;
+}
+
+/* Media queries */
+
+/* For screens less than 480px */
+@media (max-width: 480px) {
+    .skills-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .skill-card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill-card .icon {
+        font-size: 1.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 0.7rem;
+    }
+
+    .skills-section {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .skill-card:hover h3 {
+        opacity: 1;
+        font-size: 0.7rem;
+    }
+
+    .skills-grid {
+        gap: 2px;
+    }
+}
+
+/* For screens between 481px and 780px */
+@media (min-width: 481px) and (max-width: 780px) {
+    .skills-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .skill-card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill-card .icon {
+        font-size: 2rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1rem;
+    }
+
+    .skills-section {
+        padding-left: 0;
+        padding-right: 0%;
+    }
+
+    .skill-card:hover h3 {
+        opacity: 1;
+        font-size: 12px;
+    }
+}
+
+/* For screens between 781px and 1200px */
+@media (min-width: 781px) and (max-width: 1200px) {
+    .skills-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .skill-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-card .icon {
+        font-size: 2.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .skills-section {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .skill-card:hover h3 {
+        opacity: 1;
+        font-size: 16px;
+    }
+}

@@ -1,3 +1,22 @@
+html, body {
+  height: 100vh; /* This should be 100vh to fill the viewport height exactly */
+  overflow-y: scroll; /* Enable scrolling on the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  overflow-x: hidden;
+}
+
+body {
+  scroll-snap-type: y mandatory; /* Set snap type on the body */
+}
+
+.point {
+  height: 100vh; /* Each section should be the height of the viewport */
+  scroll-snap-align: start; /* Ensures the top of the section aligns with the top of the viewport */
+  width: 100%; /* Ensure sections span the full width */
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +54,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
 }
