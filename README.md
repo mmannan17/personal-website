@@ -51,34 +51,8 @@ This will start the development server and open the website in your default brow
 Usage
 Navigate: Use the navigation bar to quickly move between different sections of the website.
 Explore Projects: View detailed information about my projects in the Projects section.
-Contact: Use the contact links to reach out to me via LinkedIn, GitHub, or email.
-Project Structure
-java
-Copy code
-portfolio-website/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   ├── components/
-│   │   ├── Navbar/
-│   │   │   ├── Navbar.jsx
-│   │   │   └── Navbar.css
-│   │   ├── ProjectCarousel/
-│   │   │   ├── ProjectCarousel.jsx
-│   │   │   └── ProjectCarousel.css
-│   │   └── ...
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── .gitignore
-├── package.json
-└── README.md
+Contact: Use the contact links to reach out to me via email.
+
 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
