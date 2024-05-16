@@ -94,11 +94,11 @@ const projects = [
 
 function Project() {
     return (
-        <div id="project-title">
-            <h1>Projects</h1>
-            <div id="projects-section">
-                <ProjectCarousel projects={projects} />
-            </div>
+
+            
+        <div id="projects-section">
+                <h1>Projects</h1>
+            <ProjectCarousel projects={projects} />
         </div>
     );
 }

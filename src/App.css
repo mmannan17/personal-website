@@ -67,7 +67,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 1px;
   border: 2px solid transparent;
 }
 

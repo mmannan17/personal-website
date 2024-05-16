@@ -26,7 +26,7 @@ html, body {
   font-size: 1.2vw; /* Adjust font size dynamically based on screen width */
   animation: moveUpDown 10s linear infinite;
   position: absolute;
-  color:rgba(181, 175, 240, 0.904) ;
+  color:rgba(76, 74, 90, 0.904) ;
 }
 
 @keyframes moveUpDown {

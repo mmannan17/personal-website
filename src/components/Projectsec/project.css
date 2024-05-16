@@ -4,18 +4,29 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#project-title {
-    padding-bottom: 10vh;
+::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 51, 51);
+    
+
+}
+
+::-webkit-scrollbar {
+    width: 4px;
 }
 
 
+#project-section {
+    padding-bottom: 32vh;
+}
 
-#project-title h1 {
+
+#project-section h1 {
     color: #ffffff;
     font-size: 40px;
-    font-family: 'Google Sans', monospace;
+    font-family: Cambria, serif, ;
     text-align: center;
-    padding-top: 15vw;
+    bottom: 100vh;
+    padding-top: 5vh;
 }
 
 .project-grid {
@@ -65,14 +76,6 @@ body {
 }
 
 
-.slick-dots li button:before {
-    color: #ffffff; /* Change the color of the dots here */
-}
-
-.slick-dots li.slick-active button:before {
-    color: #8f77e7; /* Change the color of the active dot here */
-}
-
 .project-info {
     width: 100%;
     background: rgba(0, 0, 0, 0.75); /* Dark overlay for readability */
@@ -83,9 +86,19 @@ body {
     font-size: 13px;
 }
 
-.slick-prev, .slick-next {
+.slick-prev {
     position: absolute;
     z-index: 1;
+    margin-left: 15vw;
+
+} 
+
+.slick-next {
+    
+    z-index: 1;
+    margin-right: 15vw;
+    z-index: 1;
+
 }
 
 
@@ -99,7 +112,7 @@ body {
 
 
 /* Tablet devices (up to 1024px) */
-@media (max-width: 1024px) {
+@media (min-width: 787px) and (max-width: 1025px) {
     .project-grid {
         grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr)); /* Adjust grid column size for tablet */
         gap: 2vw; /* Smaller gap */
@@ -110,11 +123,7 @@ body {
         margin: 0 auto; /* Center the card horizontally */
     }
 
-    .slick-prev, .slick-next {
-        left: 5vw;
-        right: 5vw;
-    }
-
+    
     .project-image {
         max-width: 100%;
         height: auto;
@@ -135,18 +144,27 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Center the items horizontally */
-        padding: 4vh 2vw; /* Adjust padding */
+        padding: 1vh 1vw; /* Adjust padding */
         gap: 2vw; /* Smaller gap */
     }
 
     .project-card {
-        max-width: 80vw;
+        max-width: 65vw;
         margin: 0 auto; /* Center the card horizontally */
     }
 
-    .slick-prev, .slick-next {
-        left: 5vw;
-        right: 5vw;
+    .slick-prev {
+        position: absolute;
+        z-index: 1;
+        left: 1vw;
+    
+    } 
+    
+    .slick-next {
+        
+        z-index: 1;
+        right: 1vw;
+    
     }
 
     .project-image {
@@ -167,8 +185,13 @@ body {
         margin-bottom: 1vw;
     }
 
-    #project-title h1 {
-        font-size: 7vw;
+    #project-section h1 {
+        font-size: 20px;
+        padding-top: 9vh;
+    }
+
+    #project-section {
+        padding-bottom: 35vh;
     }
 }
 
@@ -181,12 +204,10 @@ body {
     }
 
     .project-card {
-        max-width: 90vw; /* Full width to use the available space */
+        max-width: 60vw; /* Full width to use the available space */
     }
 
-    .slick-prev, .slick-next {
-        display: none;
-    }
+
 
     .project-image {
         width: 100%;
@@ -205,7 +226,27 @@ body {
         margin-bottom: 1vw;
     }
 
-    #project-title h1 {
-        font-size: 8vw;
+    #project-section h1 {
+        font-size: 25px;
     }
+
+    #project-section {
+        padding-bottom: 32vh;
+    }
+
+    .slick-prev {
+        
+        z-index: 1;
+        margin-left: 35px;
+    
+    } 
+    
+    .slick-next {
+        
+        z-index: 1;
+        margin-right: 35px;
+    
+    }
+
+    
 }

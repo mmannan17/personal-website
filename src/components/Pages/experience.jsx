@@ -40,7 +40,7 @@ const Experience = () => {
     <div id='experience-section' className={styles.experienceContainer}>
       <div id='experience-title' className={styles.experienceTitle}>
         <h1>Experience</h1>
-      </div>
+        </div>
       <div className={styles.container}>
         <ExperienceCard experiences={experiences} />
       </div>

@@ -1,4 +1,5 @@
-.experienceTitle h1 {
+
+.experienceContainer h1 {
     font-size: 40px;
     color: rgb(255, 255, 255);
     font-family: 'Google Sans', monospace;
@@ -6,9 +7,36 @@
 }
 
 .experienceSection {
-    padding-bottom: 12vw;
+    padding-bottom: 25vh;
 }
 
+.slick-dots {
+    display: block !important;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    position: relative;
+    bottom: 20px;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    font-size: 0; /* Remove default button text */
+    width: 12px; /* Size of the dots */
+    height: 12px; /* Size of the dots */
+    border-radius: 50%; /* Make them circular */
+    background-color: #888; /* Color of dots */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.slick-dots li button:before {
+    display: none; /* Hide default before content */
+}
 
 
 .experienceCard {
@@ -88,9 +116,9 @@
 }
 
 /* Tablet devices (up to 768px) */
-@media (max-width: 1024px) {
+@media  (max-width: 1024px) {
     .experienceCard {
-        max-width: 600px; /* Make the card use more space */
+        max-width: 500px; /* Make the card use more space */
         margin: 5px auto; /* Center the card and reduce margin */
     }
 
@@ -109,11 +137,12 @@
         order: 2; /* Reorder if necessary */
     }
 
-    .experienceTitle h1 {
+    .experienceContainer h1 {
         font-size: 25px;
         color: rgb(255, 255, 255);
         font-family: 'Google Sans', monospace;
         text-align: center;
+        margin-top: 5vw;
     }
 
     .slick-prev {
@@ -173,10 +202,15 @@
         z-index: 100;
     }
 
-    .experienceTitle h1 {
+    .experienceContainer h1 {
         font-size: 25px;
         color: rgb(255, 255, 255);
         font-family: 'Google Sans', monospace;
         text-align: center;
+        padding-top: 10vh;
     }
+
+    .experienceContainer {
+        padding-bottom: 25vh;
+    };
 }

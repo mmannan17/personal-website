@@ -25,11 +25,11 @@ function Home() {
 
                     <About />
                 </div>
-                <div id="project-title">
+                <div id="project-section">
                 
                     <Projects />
                 </div>
-                <div id="experience-title">
+                <div id="experience-section">
     
                     <Experience />
                 </div>
