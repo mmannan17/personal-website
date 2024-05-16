@@ -10,7 +10,8 @@ const ProjectCarousel = ({ projects }) => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false
     };
 
     return (
@@ -19,11 +20,9 @@ const ProjectCarousel = ({ projects }) => {
                 <div key={index} className="project-card">
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                         <img 
-                            src={project.imageUrls.large}  // Fallback image for older browsers
-                            srcset={`${project.imageUrls.small} 375w, ${project.imageUrls.medium} 700w, ${project.imageUrls.large} 1200w`} 
-                            sizes="(max-width: 768px) 375px, (max-width: 1024px) 700px, 1200px"
+                            src={project.imageUrls.large}  // Single image source
                             alt={project.title}
-                            className={project.title === "StockSmart" ? "stock-smart-special" : ""}
+                            className="project-image"
                         />
                         <div className="project-info">
                             <h3>{project.title}</h3>

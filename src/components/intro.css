@@ -3,180 +3,86 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     background-color: transparent; /* Ensure background is transparent */
     color: #ffffff; /* White color for visibility over dark background */
     font-family: 'Google Sans ', monospace;
     position: relative; /* Needed for z-index to take effect */
     z-index: 2; /* Higher than the background */
-    padding-top: 10vw;
-    margin-top: -150px;
+    padding-top: 10vh; /* Use vh for consistent vertical spacing */
+    margin-top: 0; /* Remove negative margin */
+    padding-bottom: 19vw;
 }
 
-  
-  .intro-container h1 {
-    font-size: 2vw; /* Larger text for the header */
+.intro-container h1 {
+    font-size: 2vw; /* Use vw for responsive font size */
     color: rgba(181, 175, 240, 0.349);
-    margin-bottom: 17vw; /* Space below the header */
-    margin-left: 0.5vw;
-  }
-  
-  .intro-container p {
-    font-size: 17px;
-    color: rgb(6, 88, 42); /* Lighter text color for paragraph */
-    font-family: 'Google Sans ', monospace; /* Different font for the paragraph */
-  }
+    margin-bottom: 2vh; /* Use vh for consistent spacing */
+}
 
 
-  .my-image{
-    width: 25%;
-  }
+.my-image {
+    width: 23vw; /* Use vw for responsive width */
+    height: auto;
+}
 
-  #navsec {
-    margin-top: -300px; /* Adjust this value to move it up significantly */
+#navsec {
     justify-content: center;
-  }
+}
 
-
-
-@media (min-width: 1025px) and (max-width: 1441px) {
+/* Tablet devices (up to 1024px) */
+@media (min-width: 787px) and (max-width: 1024px) {
     .intro-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: transparent; /* Ensure background is transparent */
-      color: #ffffff; /* White color for visibility over dark background */
-      font-family: 'Google Sans ', monospace;
-      position: relative; /* Needed for z-index to take effect */
-      z-index: 2; /* Higher than the background */
-      padding-top: 10vw;
-      margin-top: -150px;
+        padding-top: 10vh; /* Smaller margin for tablets */
     }
 
-    
     .intro-container h1 {
-      font-size: 2vw; /* Larger text for the header */
-      color: rgba(181, 175, 240, 0.349); /* Space below the header */
-      margin-left: 0.5vw;
-    }
-    
-    .intro-container p {
-      font-size: 17px;
-      color: rgb(6, 88, 42); /* Lighter text color for paragraph */
-      font-family: 'Google Sans ', monospace; /* Different font for the paragraph */
+        font-size: 2vw; /* Adapt font size to be proportional to smaller screens */
     }
 
 
-    .my-image{
-      width: 30%;
-    }
 
-    #navsec {
-      margin-top: -20vh; /* Adjust this value to move it up significantly */
-      justify-content: center;
+    .my-image {
+        width: 35vw; /* Adjust width for smaller screens */
+        padding-top: 2vh; /* Adjust the top margin for proper spacing */
     }
 
 }
 
-
-  @media (min-width: 787px) and (max-width: 1024px) {
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
     .intro-container {
-      padding-top: 5vw; /* Even smaller margin to better use limited space */
-      padding-bottom: 10vw; /* Less space needed as content is more condensed */
+        padding-top: 5vh; /* Smaller margin for mobiles */
     }
-  
+
     .intro-container h1 {
-      font-size: 4vw; /* Adapt font size to be proportional to smaller screen widths */
+        font-size: 4vw; /* Larger font size for better readability */
+        padding-bottom: 5vh; /* Less margin to keep things tight */
     }
-  
+
     .intro-container p {
-      font-size: 13px; /* Smaller font size to fit more text on screen */
+        font-size: 4vw; /* Smaller font size for mobiles */
+        width: 70%;
     }
 
     .my-image {
-      width: 40%; /* Adjust width to a suitable size on smaller screens */ /* Set a max-width to ensure the image does not become too large */
-      padding-top: 2vw; /* Adjust the top margin to ensure proper spacing */
-      border-radius: 50px; /* Optional: adjust the border-radius for aesthetic purposes */
+        width: 50vw; /* Adjust width for mobiles */
+        padding-top: 2vh; /* Adjust the top margin for proper spacing */
     }
 
     #navsec {
-      margin-top: -125px; /* Adjust this value to move it up significantly */
-      justify-content: center;
-  
+      top:-500px;
     }
 
-  }
-
-
-
-  @media (max-width: 480px) {
-    .intro-container {
-      padding-top: 5vw; /* Even smaller margin to better use limited space */
-    }
   
+
+
+}
+
+/* Small tablets and large phones (481px to 786px) */
+@media (min-width: 481px) and (max-width: 786px) {
+
     .intro-container h1 {
-      font-size: 4vw; /* Adapt font size to be proportional to smaller screen widths */
-      padding-bottom: 5vw; /* Less margin to keep things tight and tidy */
+        font-size: 3vw;
     }
-  
-    .intro-container p {
-      font-size: 14px; /* Smaller font size to fit more text on screen */
-      width:  70%;
-    }
-
-    .my-image {
-      width: 40%;
-      padding-top: 2vw; /* Adjust the top margin to ensure proper spacing */
-      border-radius: 50px; /* Optional: adjust the border-radius for aesthetic purposes */
-    }
-
-    #navsec {
-      margin-top: -50px; /* Adjust this value to move it up significantly */
-      display: flex;
-      justify-content: center;
-      max-width: 300px;
-      font-size: 2px;
-      margin-right: 25px;
-      margin-left: 25px;
-    }
-
-    .section-button {
-      font-size: 5px;
-      color: white;
-      background-color: black;
-      background: transparent;
-      border: 2.75px solid;
-      border-color: rgba(181, 175, 240, 0.904) ;
-      border-radius: 25px;
-      cursor: pointer;
-      padding: 10px 10px;
-      margin: 0 10px;
-      font-family: 'Google Sans', sans-serif;
-      text-transform: none;
-      font-weight: bold;
-    }
-  
-  
-
-  }
-
-  @media (min-width: 481px) and (max-width: 786px) {
-    .my-image{
-      width: 40%;
-    }
-
-    #navsec {
-
-      margin-top: -75px;
-
-    }
-
-    .intro-container h1{
-
-      font-size: 17px;
-    }
-
-
-  }
+}

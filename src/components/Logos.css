@@ -23,7 +23,8 @@
 }
 
 .resume-logo{
-    width: 50px;
+    width: 4vw;
+    max-width: 40px;
 
 }
 
@@ -63,10 +64,6 @@
         width: 20px
     }
 
-    .resume-logo {
-
-        width: 30px;
-    }
 }
 
 @media (min-width: 487px) and (max-width: 7px) {
@@ -96,8 +93,5 @@
         width: 20px
     }
 
-    .resume-logo {
 
-        width: 30px;
-    }
 }

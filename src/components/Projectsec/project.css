@@ -1,25 +1,34 @@
-/* Updated CSS for project.css */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
 
+#project-title {
+    padding-bottom: 10vh;
+}
+
+
+
 #project-title h1 {
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-    font-family: google sans, monospace;
-    padding-top: 5vh;
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 'Google Sans', monospace;
+    text-align: center;
+    padding-top: 15vw;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25px, 35px)); /* Adjusted maximum size */
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr)); /* Responsive grid columns */
     justify-content: center;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    top: -100px;
+}
+
+.project-info li {
+    padding: 0.3vw; /* Add padding specifically to the <li> elements */
 }
 
 .project-card {
@@ -28,271 +37,175 @@ body {
     cursor: pointer;
     transform: scale(1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
+    z-index: 1;
     border-radius: 20px;
-    margin: 0 10px;
-    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.2); /* Adjusted shadow position */
-    width: 70%; /* This will make the card take full width of the column */
-    max-width: 1200px; /* Prevent the card from exceeding the image width */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adjusted shadow position */
+    width: 100%; /* This will make the card take full width of the column */
+    max-width: 35vw; /* Prevent the card from exceeding the image width */
     display: flex;
     justify-content: center; /* Centers children horizontally */
     align-items: center; /* Centers children vertically */
     flex-direction: column; /* Ensures the image and text are stacked vertically */
     text-align: center; /* Centers the text content */
-    height: auto;
-    padding-bottom: 17vw;
-    background-color: rgba(250, 238, 238, 0); /* Add a background color to ensure shadow visibility */
+    background-color: rgba(250, 238, 238, 0); /* Ensure shadow visibility */
 }
 
 .project-card:hover {
-    transform: scale(1.1); /* Slightly larger scale on hover */
-    box-shadow: 0px -15px 25px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+    transform: scale(1); /* Slightly larger scale on hover */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
 }
 
 .project-image {
-    width: 40%;
-    height: 100%;
+    width: 90%;
+    height: auto;
+    justify-content: center;
     transition: transform 0.3s ease;
-    z-index: 1000;
-    display: block;
+    z-index: 1;
     margin: 0 auto;
-    top: -50vh;
+}
+
+
+.slick-dots li button:before {
+    color: #ffffff; /* Change the color of the dots here */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #8f77e7; /* Change the color of the active dot here */
 }
 
 .project-info {
-    position: relative; /* Changed from absolute to relative */
     width: 100%;
     background: rgba(0, 0, 0, 0.75); /* Dark overlay for readability */
     color: white;
-    padding: 7px; /* Increased padding for more space */
-    margin-top: 10px; /* Add margin to create space between the card and info */
-    z-index: 1000;
     overflow-y: auto; /* Ensure vertical scrolling */
-    max-height: 300px; /* Limit the height to enable scrolling */
+    max-height: 30vh; /* Limit the height to enable scrolling */
     text-align: left; /* Ensure text aligns to the left */
+    font-size: 13px;
 }
 
-.slick-prev {
-    margin-left: 10vw;
+.slick-prev, .slick-next {
     position: absolute;
-    z-index: 1000;
+    z-index: 1;
 }
 
-.slick-next {
-    margin-right: 10vw;
-    position: absolute;
-    z-index: 1000;
-}
 
 .carousel-container {
     width: 100%;
-    min-height: 300px;
+    min-height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
 }
 
 
-
-.project-card ul {
-    padding-left: 2;
-}
-
-.project-card ul li {
-    margin-bottom: 10px;
-}
-
+/* Tablet devices (up to 1024px) */
 @media (max-width: 1024px) {
     .project-grid {
-        grid-template-columns: repeat(auto-fill, minmax(50px, 100px)); /* Adjust grid column size for tablet */
-        gap: 15px; /* Smaller gap */
-        padding: 40px 15px; /* Adjust padding */
+        grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr)); /* Adjust grid column size for tablet */
+        gap: 2vw; /* Smaller gap */
     }
 
     .project-card {
-        max-width: 100%;
-        margin: 0 auto; /* Centers the card horizontally */
-        align-items: center;
-        max-width: 600px;
+        max-width: 80vw; /* Limit card width */
+        margin: 0 auto; /* Center the card horizontally */
     }
 
     .slick-prev, .slick-next {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        left: 5vw;
+        right: 5vw;
     }
 
     .project-image {
-        object-fit: cover;
         max-width: 100%;
+        height: auto;
     }
 
     .carousel-container {
-        width: 100%;
-        min-height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 15px; /* Add padding to make sure content doesn't touch the edges */
+        padding: 0 2vw; /* Add padding to make sure content doesn't touch the edges */
     }
 
     #project-title h1 {
-        color: white;
-        font-size: 35px;
-        font-family: google sans, monospace;
+        font-size: 7vw; /* Adjusted for tablet */
     }
 }
 
-@media (min-width: 401px) and (max-width: 486px) {
-    .project-image {
-        width: 100%; /* Cover the full width of the container */
-        height: 100%; /* Cover the full height of the container */
-        object-fit: cover; /* Maintain the aspect ratio */
-        display: block;
-    }
-
-    .project-card {
-        max-width: 340px; /* Full width to use the available space */
-        max-height: 500px; /* Optional: adjust height as necessary */
-        margin: 0 2px; /* Smaller margins */
-        top: -7vh;
-        padding-top: 50px;
-    }
-
-    .project-grid {
-        align-items: center;
-    }
-
-    .slick-prev {
-        margin-left: 35px;
-        position: absolute;
-        z-index: 100;
-    }
-
-    .slick-next {
-        margin-right: 35px;
-        position: absolute;
-        z-index: 100;
-    }
-
-    #project-title h1 {
-        color: white;
-        font-size: 30px;
-        font-family: google sans, monospace;
-        margin-top: 10vh;
-    }
-    .project-info{
-        padding: 3px;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 780px) {
+/* Small tablets and large phones (401px to 786px) */
+@media (min-width: 401px) and (max-width: 786px) {
     .project-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: center; /* Center the items horizontally */
-        padding: 40px 15px; /* Adjust padding */
-        gap: 15px; /* Smaller gap */
+        padding: 4vh 2vw; /* Adjust padding */
+        gap: 2vw; /* Smaller gap */
     }
 
     .project-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto; /* Centers the card horizontally */
-        max-width: 375px;
-        scroll-margin-top: 3vw;
+        max-width: 80vw;
+        margin: 0 auto; /* Center the card horizontally */
     }
 
     .slick-prev, .slick-next {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        left: 5vw;
+        right: 5vw;
     }
 
     .project-image {
-        object-fit: cover;
         max-width: 100%;
-        align-items: center;
+        height: auto;
     }
 
-    .carousel-container {
-        width: 100%;
-        min-height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+    .project-info {
+        padding: 2vw;
     }
-
-    .project-info{
-        padding: 2px;
-    }
-
-
 
     .project-card ul {
-        list-style-type: none;
         padding-left: 0;
+        list-style-type: none;
     }
-    
+
     .project-card ul li {
-        margin-bottom: 2px;
-    
-
-
-
-}
-
-@media (max-width: 400px) {
-
-    .project-image {
-        width: 100%; /* Cover the full width of the container */
-        object-fit: cover; /* Maintain the aspect ratio */
-        display: block;
-        margin-top: 20px; /* Adjust margin to bring the image down */
-    }
-
-    .project-card {
-        max-width: 100%; /* Full width to use the available space */
-        max-height: 500px; /* Optional: adjust height as necessary */
-         /* Smaller margins */
-        position: relative; /* Ensure correct positioning */
-        padding-top: 40px; /* Add padding at the top to bring content down */
-        top: -7vh; /* Adjust as necessary */
-    }
-
-    .project-grid {
-        align-items: center;
-    }
-
-    .slick-prev {
-        margin-left: 35px;
-        position: absolute;
-        z-index: 100;
-    }
-
-    .slick-next {
-        margin-right: 30px;
-        position: absolute;
-        z-index: 100;
+        margin-bottom: 1vw;
     }
 
     #project-title h1 {
-        color: white;
-        font-size: 30px;
-        font-family: google sans, monospace;
-        margin-top: 10vh;
+        font-size: 7vw;
     }
-
-    .project-info{
-        padding: 2px;
-    }
-
-
-
-
-
 }
 
+/* Mobile devices (up to 400px) */
+@media (max-width: 400px) {
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        max-width: 90vw; /* Full width to use the available space */
+    }
+
+    .slick-prev, .slick-next {
+        display: none;
+    }
+
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-info {
+        font-size: 13px;
+    }
+
+    .project-card ul {
+        padding-left: 2vw;
+    }
+
+    .project-card ul li {
+        margin-bottom: 1vw;
+    }
+
+    #project-title h1 {
+        font-size: 8vw;
+    }
 }

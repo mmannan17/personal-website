@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import styles from './experience.module.css'
+import styles from './experience.module.css';
 
 const ExperienceCard = ({ experiences }) => {
     const settings = {
@@ -13,23 +13,31 @@ const ExperienceCard = ({ experiences }) => {
     };
 
     return (
-        
-        <Slider {...settings}>
-            {experiences.map((exp, index) => (
-                <div className={styles.experienceCard}>
-                <div className={styles.imageContainer}>
-                    <img src={exp.imageUrl} alt={`${exp.company} logo`} className={styles.experienceImage} />
-                </div>
-                <div className={styles.content}>
-                    <h2>{exp.title}</h2>
-                    <h3>{exp.company}</h3>
-                    <p className={styles.period}>{exp.period}</p>
-                    <p>{exp.description}</p>
-                </div>
-            </div>
-            ))}
-        </Slider>
+        <div className={styles.experienceSection}>
+            <Slider {...settings}>
+                {experiences.map((exp, index) => (
+                    <div key={index} className={styles.experienceCard}>
+                        <div className={styles.imageContainer}>
+                            <img src={exp.imageUrl} alt={`${exp.company} logo`} className={styles.experienceImage} />
+                        </div>
+                        <div className={styles.content}>
+                            <h2>{exp.title}</h2>
+                            <h3>{exp.company}</h3>
+                            <p className={styles.period}>{exp.period}</p>
+                            <div className={styles.scrollContent}>
+                                <ul className={styles.description}>
+                                    {exp.description.map((desc, i) => (
+                                        <li key={i}>{desc}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </Slider>
+        </div>
     );
 };
 
 export default ExperienceCard;
+
