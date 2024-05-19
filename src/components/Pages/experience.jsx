@@ -8,7 +8,7 @@ const experiences = [
   {
     title: "Developer Intern",
     company: "Mowasalat Karwa",
-    period: "May 2022 - August 2022",
+    period: "05/22 - 08/22",
     description: [
       "Contributed to enhancing the Karwa app's bus schedule and notification system, working under the guidance of senior developers.",
       "Assisted in refining the real-time notification features and user interface, improving the efficiency of the app and making it easier for users to receive timely bus schedule updates.",

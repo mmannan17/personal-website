@@ -10,33 +10,6 @@
     padding-bottom: 25vh;
 }
 
-.slick-dots {
-    display: block !important;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000;
-    position: relative;
-    bottom: 20px;
-}
-
-.slick-dots li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.slick-dots li button {
-    font-size: 0; /* Remove default button text */
-    width: 12px; /* Size of the dots */
-    height: 12px; /* Size of the dots */
-    border-radius: 50%; /* Make them circular */
-    background-color: #888; /* Color of dots */
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.slick-dots li button:before {
-    display: none; /* Hide default before content */
-}
 
 
 .experienceCard {
@@ -54,7 +27,7 @@
     box-sizing: border-box; /* Includes padding and border in the width */
     bottom: -20px;
     background-color: black;
-    height: 75vh; /* Make the card shorter */
+    height: 85vh; /* Make the card shorter */
     overflow: hidden; /* Ensure content does not overflow */
 }
 
@@ -81,7 +54,7 @@
     z-index: 10;
     color: rgb(255, 240, 240);
     flex: 3;
-    font-size: 20px;
+    font-size: 18px;
     font-family: Cambria, serif;
     text-align: align ; /* Center the text */
     min-height: 70%;
@@ -97,7 +70,7 @@
 
 
 .scrollContent {
-    height: 40vh; /* Adjust this height as needed */
+    height: 50vh; /* Adjust this height as needed */
     overflow-y: auto;
     padding-right: 10px; /* Adjust for scrollbar */
 }
@@ -156,6 +129,11 @@
         position: absolute;
         z-index: 100;
     }
+    .scrollContent {
+        height: 50vh; /* Adjust this height as needed */
+        overflow-y: auto;
+        padding-right: 10px; /* Adjust for scrollbar */
+    }
 }
 
 /* Mobile devices (up to 480px) */
@@ -166,7 +144,7 @@
         padding-bottom: 1vh; /* Ensure padding is sufficient */
         max-width: 275px;
         top: -1vh;
-        height: 375px;
+        height: 400px;
     }
 
     .imageContainer {
@@ -184,10 +162,16 @@
     .content {
         flex: 1; /* Take available space */
         font-size: 10px; /* Less padding */
+        padding-bottom: 1vh;
+        
+    }
+
+    .content ul li {
+        padding-bottom: 1vw;
     }
 
     .period {
-        font-size: 10px; /* Smaller text */
+        font-size: 6px; /* Smaller text */
     }
 
     .slick-prev {
@@ -202,6 +186,21 @@
         z-index: 100;
     }
 
+    .scrollContent {
+        height: 40vh; /* Adjust this height as needed */
+        overflow-y: auto;
+        padding-right: 10px; /* Adjust for scrollbar */
+    }
+
+
+
+    .scrollContent {
+        height: 25vh; /* Adjust this height as needed */
+        overflow-y: auto;
+        padding-right: 10px; /* Adjust for scrollbar */
+    }
+
+
     .experienceContainer h1 {
         font-size: 25px;
         color: rgb(255, 255, 255);
@@ -213,4 +212,6 @@
     .experienceContainer {
         padding-bottom: 25vh;
     };
+
+
 }

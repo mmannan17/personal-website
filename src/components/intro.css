@@ -56,13 +56,14 @@
     }
 
     .intro-container h1 {
-        font-size: 4vw; /* Larger font size for better readability */
+        font-size: 3vw; /* Larger font size for better readability */
         padding-bottom: 5vh; /* Less margin to keep things tight */
     }
 
     .intro-container p {
-        font-size: 4vw; /* Smaller font size for mobiles */
+        font-size: 3vw; /* Smaller font size for mobiles */
         width: 70%;
+        
     }
 
     .my-image {

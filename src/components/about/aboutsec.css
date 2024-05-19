@@ -6,6 +6,7 @@
   text-align: center;
   z-index: 10;
   padding-bottom: 8vw;
+  
 
 }
 
@@ -42,7 +43,7 @@
   background-color: rgba(0, 0, 0, 0.747);
   border: 2px solid;
   
-  
+ 
 }
 
 /* Adding pseudo-elements for the borders */
