@@ -2,7 +2,7 @@ import React from 'react';
 import { useTrail, animated } from '@react-spring/web';
 import { FaPython, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import { DiDjango, DiGit } from 'react-icons/di';
-import { SiC, SiCplusplus, SiCsharp, SiScikitlearn, SiNumpy, SiFlask, SiTensorflow, SiJavascript, SiVisualstudiocode, SiMysql } from 'react-icons/si';
+import { SiC, SiCplusplus, SiCsharp, SiScikitlearn, SiNumpy, SiFlask, SiTensorflow, SiJavascript, SiVisualstudiocode, SiMysql, SiPostgresql } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import '../Skillssec/skills.css'; // Ensure correct path
 
@@ -22,7 +22,9 @@ const skills = [
     { name: 'Git', icon: <DiGit />, color: '#F05032' },
     { name: 'VS Code', icon: <SiVisualstudiocode />, color: '#007ACC' },
     { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
-    { name: 'SQL', icon: <SiMysql />, color: '#4479A1' }
+    { name: 'SQL', icon: <SiMysql />, color: '#4479A1' },
+    { name: 'PostgreSQL', icon: <SiPostgresql/>, color: '#E34F26'}
+
 ];
 
 const randomPosition = () => ({
