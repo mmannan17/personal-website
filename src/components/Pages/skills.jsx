@@ -4,6 +4,7 @@ import { FaPython, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import { DiDjango, DiGit } from 'react-icons/di';
 import { SiC, SiCplusplus, SiCsharp, SiScikitlearn, SiNumpy, SiFlask, SiTensorflow, SiJavascript, SiVisualstudiocode, SiMysql, SiPostgresql } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
+import { SiAmazonaws, SiDocker } from 'react-icons/si';
 import '../Skillssec/skills.css'; // Ensure correct path
 
 const skills = [
@@ -23,7 +24,10 @@ const skills = [
     { name: 'VS Code', icon: <SiVisualstudiocode />, color: '#007ACC' },
     { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
     { name: 'SQL', icon: <SiMysql />, color: '#4479A1' },
-    { name: 'PostgreSQL', icon: <SiPostgresql/>, color: '#E34F26'}
+    { name: 'PostgreSQL', icon: <SiPostgresql/>, color: '#E34F26'},
+    { name: 'Docker', icon: <SiDocker/>, color: '#0db7ed'},
+    { name: 'AWS', icon: <SiAmazonaws/>, color: '#FF9900'}
+
 
 ];
 
