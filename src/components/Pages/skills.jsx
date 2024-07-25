@@ -19,7 +19,7 @@ const skills = [
     { name: 'Flask', icon: <SiFlask className="flask-icon" />, color: 'white' }, // Added class here
     { name: 'TensorFlow', icon: <SiTensorflow />, color: '#FF6F00' },
     { name: 'Scikit-learn', icon: <SiScikitlearn />, color: '#F7931E' },
-    { name: 'NumPy', icon: <SiNumpy />, color: '#013243' },
+    { name: 'NumPy', icon: <SiNumpy />, color: '#3776AB' },
     { name: 'Git', icon: <DiGit />, color: '#F05032' },
     { name: 'VS Code', icon: <SiVisualstudiocode />, color: '#007ACC' },
     { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },

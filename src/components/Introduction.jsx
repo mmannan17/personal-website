@@ -22,9 +22,10 @@ function Introduction() {
         <div id='navsec'>
 
           <button className="section-button" onClick={() => scrollTo('about-section')}>About</button>
+          <button className="section-button" onClick={() => scrollTo('skills-section')}>Skills</button>
           <button className="section-button" onClick={() => scrollTo('project-section')}>Projects</button>
           <button className="section-button" onClick={() => scrollTo('experience-section')}>Experience</button>
-          <button className="section-button" onClick={() => scrollTo('skills-section')}>Skills</button>
+          
           
         </div>
 

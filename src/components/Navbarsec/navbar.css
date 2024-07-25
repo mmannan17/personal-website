@@ -1,79 +1,136 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #33333300;
-    padding: 0.55rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Initially transparent */
+  padding: 0.55rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar.tinted {
+  background-color: rgba(51, 51, 51, 0.377); /* 37.7% tinted */
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  position: relative; /* Ensure the dropdown menu is positioned relative to this container */
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-icon {
+  width: 1.35rem; /* Adjust size as needed */
+  height: 0.75rem; /* Adjust size as needed */
+  z-index: 1000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 3rem; /* Adjust based on your layout */
+  background-color: rgba(0, 0, 0, 0.219); /* 21.9% tinted */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure the dropdown menu is below the menu button */
+  display: none; /* Hide by default */
+  flex-direction: row; /* Arrange items in a row */
+  padding: 0.5rem;
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+.dropdown-menu.show {
+  display: flex; /* Show when the menu is toggled */
+}
+
+.menu-item {
+  color: rgb(255, 255, 255);
+  padding: 10px 15px; /* Adjust padding for horizontal arrangement */
+  text-align: center;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.menu-item:hover {
+  background-color: #000000;
+}
+
+/* Media queries for mobile optimization */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.4rem;
   }
-  
-  .left-container {
-    display: flex;
-    align-items: center;
-    position: relative; /* Ensure the dropdown menu is positioned relative to this container */
-  }
-  
-  .right-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
+
   .menu-icon {
-    width: 1.35rem; /* Adjust size as needed */
-    height: 0.75rem; /* Adjust size as needed */
-    z-index: 1000;
+    width: 1rem; /* Adjust size as needed */
+    height: 0.5rem; /* Adjust size as needed */
   }
-  
+
   .dropdown-menu {
-    position: absolute;
-    top: 3rem; /* Adjust based on your layout */
-    left: 0.2rem;
-    background-color: #000000cc;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 999; /* Ensure the dropdown menu is below the menu button */
-    display: none; /* Hide by default */
+    top: 50%; /* Center vertically */
+    left: calc(100% + 10px); /* Align with the right edge of the menu button */
+    background-color: rgba(0, 0, 0, 0); /* 80% tinted */
+    flex-direction: row; /* Keep items in a row */
+    padding: 0.3rem;
+    transform: translateY(-50%); /* Center vertically */
   }
-  
-  .dropdown-menu.show {
-    display: block; /* Show when the menu is toggled */
-  }
-  
+
   .menu-item {
-    display: block;
-    color: rgb(187, 159, 240);
-    padding: 10px;
-    text-align: left;
-    text-decoration: none;
-    background: none;
-    border: none;
-    width: 100%; /* Ensure full width for better clickable area */
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1000;
-    font-weight: bold;
-  }
-  
-  .menu-item:hover {
-    background-color: #000000;
+    font-size: 14px;
+    padding: 5px 8px;
   }
 
-
-  @media (max-width: 486px ) {
-
-    .menu-item{
-        font-size: 10px;
-
-    }
-    
+  .menu-button {
+    width: 1.5rem; /* Adjust size as needed */
+    height: 1.5rem; /* Adjust size as needed */
   }
-  
+}
+
+@media (max-width: 486px) {
+  .navbar {
+    padding: 0.3rem;
+  }
+
+  .menu-icon {
+    width: 0.75rem; /* Adjust size as needed */
+    height: 0.4rem; /* Adjust size as needed */
+  }
+
+  .dropdown-menu {
+    top: 50%; /* Center vertically */
+    left: calc(100% + 10px); /* Align with the right edge of the menu button */
+    background-color: rgba(0, 0, 0, 0); /* 80% tinted */
+    flex-direction: row; /* Keep items in a row */
+    padding: 0.2rem;
+    transform: translateY(-50%); /* Center vertically */
+  }
+
+  .menu-item {
+    font-size: 8px;
+    padding-top: 21px;
+  }
+
+  .menu-button {
+    width: 1.25rem; /* Adjust size as needed */
+    height: 1.25rem; /* Adjust size as needed */
+  }
+}

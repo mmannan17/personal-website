@@ -1,185 +1,255 @@
-#about-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  padding-bottom: 8vw;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
   
-
 }
 
-#about-section h1 {
-  position: relative; /* Needed for absolute positioning of the pseudo-element */
-  color: rgba(181, 175, 240, 0.904);
-  font-size: 40px;
-  padding-bottom: 18px; /* Space below the text */
-  z-index: 10;
-  margin-right: 65vw;
-}
-
-#about-section h1:after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-   /* Relative to the parent's width */
-  height: 100px;
-  background-color: rgb(255, 255, 255);
-  z-index: 10;
-}
-
-.about-content {
-  position: relative;
+.about-skills-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 75%;
-  padding: 20px;
-  margin-top: -40px; /* Space between title and content */
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.747);
-  border: 2px solid;
-  
- 
+  padding: 60px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
 }
 
-/* Adding pseudo-elements for the borders */
-.about-content::before, .about-content::after {
-  content: '';
-  position: absolute;
-  background-color: rgba(181, 175, 240, 0.904);
-  z-index: 11; /* Ensure it's above the content */
+.about-content {
+  flex: 2;
+  padding-right: 20px;
+  margin-bottom: 10vw;
+  margin-top: 3vw;
 }
 
-/* Custom vertical left border */
-.about-content::before {
-  left: 0;
-  top: 4%; /* Starts a bit from the top */
-  bottom: 60%; /* Ends a bit from the bottom */
-  width: 4px; /* Thickness of the border */
+.skills-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Custom horizontal top border */
-.about-content::after {
-
-  top: 3;
-  left: 0%; /* Starts a bit from the left */
-  right: 85%; /* Ends a bit from the right */
-  height: 4px; /* Thickness of the border */
+#about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f5eae8; /* Change this color as needed */
 }
-
 
 .about-text {
-  color: rgb(253, 251, 251);
-  font-family: google sans,monospace;
-  font-weight: bold;
-  width: 70%;
-  font-size: 25px;
-  z-index: 100;
+  max-width: 600px;
   text-align: left;
-  margin-top: -10px;
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: #ccc;
 }
 
-.about-image {
-  width: 25%;
-  height: 20%;
-  border-radius: 9px;
-  z-index: 100;
+.about-text p {
+  margin-bottom: 20px;
 }
 
-.about-image img {
-  width: 80%;
-  height: auto;
-  z-index: 100;
+.skills-section {
+  text-align: center;
+  width: 100%;
+  padding-top: 3.9vw;
 }
 
-@media (max-width: 1024px) {
-  #about-section {
-    margin-bottom: 15vw; /* Smaller margin for smaller screens */
-    scroll-margin-top: 3vw; /* Adjusted for smaller viewport */
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Google Sans', monospace;
+  color: rgb(243, 246, 248);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+.skill-card {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  border-color: #ff6347; /* Change this color as needed */
+}
+
+.skill-card .icon {
+  font-size: 1.75rem;
+  color: #ff6347; /* Change this color as needed */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.skill-card:hover .icon {
+  transform: translateY(-5px); /* Move the icon up slightly */
+  opacity: 1;
+}
+
+.skill-card:hover h3 {
+  opacity: 1;
+  font-size: 0.75rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .about-skills-section {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #about-section h1 {
-    font-size: 30px; /* Smaller font size */
-    margin-right: 10vw; /* Adjusted margin */
-  }
-
-  #about-section h1:after {
-    height: 50px; /* Smaller decorative bar */
+  .about-content, .skills-content {
+    padding: 0;
+    width: 100%;
   }
 
   .about-content {
-    width: 90%; /* Increased width for better use of space */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center alignment for stacked items */
+    padding-bottom: 40px;
+  }
+
+  #about-section h1 {
+    font-size: 2rem;
   }
 
   .about-text {
-    width: 100%; /* Full width for text in smaller screens */
-    font-size: 20px; /* Smaller font size for readability */
+    font-size: 1rem;
   }
 
-  .about-image {
-    width: 50%; /* Larger relative width for images on smaller screens */
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
-  .about-image img {
-    width: 100%; /* Full width of container */
-  }
-}
-
-
-
-
-/* For tablets */
-@media (min-width: 481) and (max-width: 786px) {
-  #about-section h1 {
-    font-size: 25px; /* Even smaller font size for mobile */
-    margin-right: 0; /* Remove extra margin */
-  }
-  #about-section p{
-    font-size:  12px;
+  .skill-card {
+    width: 70px;
+    height: 70px;
   }
 
-  .about-content::before,
-  .about-content::after {
-    display: none; /* Remove borders to simplify layout */
+  .skill-card .icon {
+    font-size: 1.5rem;
   }
 
-  .about-image {
-    width: 70%; /* Make image larger to fill screen */
+  .skill-card h3 {
+    font-size: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
   #about-section h1 {
-    font-size: 30px; /* Even smaller font size for mobile */
-    margin-right: 0; /* Remove extra margin */
-  }
-  #about-section p{
-    font-size:  12.5px;
-    padding-top: 2px;
+    font-size: 1.5rem;
   }
 
-  .about-content::before,
-  .about-content::after {
-    display: none; /* Remove borders to simplify layout */
-    border: 0 solid;
+  .about-text {
+    font-size: 0.9rem;
   }
 
-  .about-image {
-    width: 50%; /* Make image larger to fill screen */
-    padding-bottom: zzvw;
-  }
-  .about-section {
-    position: relative;
-    top: -150px;
-    padding-bottom: 100vh;
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
-  
+  .skill-card {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-card .icon {
+    font-size: 1.5rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.7rem;
+  }
+
+  .skills-grid {
+    gap: 10px;
+  }
 }
 
+@media (min-width: 481px) and (max-width: 780px) {
+  .skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .skill-card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-card .icon {
+    font-size: 1.75rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1rem;
+  }
+
+  .skills-section {
+    padding-left: 0;
+    padding-right: 0%;
+  }
+
+  .skill-card:hover h3 {
+    opacity: 1;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1200px) {
+  .skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .skill-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-card .icon {
+    font-size: 1.75rem;
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills-section {
+    padding-left: 20vw;
+    padding-right: 20vw;
+  }
+
+  .skill-card:hover h3 {
+    opacity: 1;
+    font-size: 16px;
+  }
+}

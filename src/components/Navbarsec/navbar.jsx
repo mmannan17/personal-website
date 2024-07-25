@@ -8,17 +8,15 @@ function NavBar({ scrollTo }) {
 
   const handleToggleMenu = () => {
     setMenuVisible(!menuVisible);
-    console.log("Menu visibility toggled:", !menuVisible); // Debug log
   };
 
   const handleScrollTo = (section) => {
     scrollTo(section);
     setMenuVisible(false); // Close the menu after clicking
-    console.log("Scrolled to section:", section); // Debug log
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${menuVisible ? 'tinted' : ''}`}>
       <div className="left-container">
         <button className="menu-button" onClick={handleToggleMenu}>
           <img src={menuIcon} alt="Menu" className="menu-icon" />
@@ -26,9 +24,9 @@ function NavBar({ scrollTo }) {
         <div className={`dropdown-menu ${menuVisible ? 'show' : ''}`}>
           <button className="menu-item" onClick={() => handleScrollTo('home-section')}>Home</button>
           <button className="menu-item" onClick={() => handleScrollTo('about-section')}>About</button>
-          <button className="menu-item" onClick={() => handleScrollTo('project-title')}>Projects</button>
-          <button className="menu-item" onClick={() => handleScrollTo('experience-title')}>Experience</button>
           <button className="menu-item" onClick={() => handleScrollTo('skills-section')}>Skills</button>
+          <button className="menu-item" onClick={() => handleScrollTo('project-section')}>Projects</button>
+          <button className="menu-item" onClick={() => handleScrollTo('experience-title')}>Experience</button>
         </div>
       </div>
       <div className="right-container">
