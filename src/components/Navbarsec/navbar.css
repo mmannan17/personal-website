@@ -43,8 +43,8 @@
   position: absolute;
   top: 50%; /* Center vertically */
   left: 3rem; /* Adjust based on your layout */
-  background-color: rgba(0, 0, 0, 0.219); /* 21.9% tinted */
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0); /* 21.9% tinted */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0);
   z-index: 999; /* Ensure the dropdown menu is below the menu button */
   display: none; /* Hide by default */
   flex-direction: row; /* Arrange items in a row */
@@ -71,7 +71,8 @@
 }
 
 .menu-item:hover {
-  background-color: #000000;
+  background-color: #00000038;
+  border-radius: 20%;
 }
 
 /* Media queries for mobile optimization */
@@ -130,7 +131,12 @@
   }
 
   .menu-button {
-    width: 1.25rem; /* Adjust size as needed */
-    height: 1.25rem; /* Adjust size as needed */
+    width: 1.5rem; /* Adjust size as needed */
+    height: 1.5rem; /* Adjust size as needed */
+  }
+
+
+  .navbar.tinted {
+    background-color: rgba(51, 51, 51, 0); /* 37.7% tinted */
   }
 }
