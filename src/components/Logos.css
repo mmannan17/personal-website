@@ -1,6 +1,6 @@
 .logo-container {
     position: fixed;
-    top: 1vh;
+    top: 0.1vh;
     right: 3vw;
     display: flex; /* This will align both images in a row */
     align-items: center; /* Center the logos vertically */
@@ -15,16 +15,17 @@
 }
 
 .linkedin-logo {
-    width: 50px; /* Adjust size as needed */
+    width: 65px; /* Adjust size as needed */
 }
 
 .github-logo {
-    width: 40px; /* Adjust size as needed */
+    width: 2.1875rem; /* Adjust size as needed */
 }
 
 .resume-logo{
-    width: 4vw;
+    width: 1.8vw;
     max-width: 40px;
+    padding-top: 0.5vw;
 
 }
 
@@ -63,10 +64,16 @@
 
         width: 20px
     }
+    .resume-logo{
+        width: 4.5vw;
+        max-width: 40px;
+        padding-top: 2.5vw;
+    
+    }
 
 }
 
-@media (min-width: 487px) and (max-width: 7px) {
+@media (min-width: 487px) and (max-width: 1024px) {
 
     .logo-container {
         position: fixed;
@@ -91,6 +98,18 @@
     .github-logo {
 
         width: 20px
+    }
+
+    .resume-logo{
+        width: 25px;
+        max-width: 40px;
+        padding-top: 0.8vw;
+    
+    }
+
+    .linkedin-logo {
+        width: 35px; /* Adjust size as needed */
+        margin-left: 10px; /* Space from the left edge */
     }
 
 
