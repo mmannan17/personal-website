@@ -2,7 +2,7 @@ import React from 'react';
 import { useTrail, animated } from '@react-spring/web';
 import { FaPython, FaHtml5, FaCss3Alt, FaReact } from 'react-icons/fa';
 import { DiDjango, DiGit } from 'react-icons/di';
-import { SiC, SiCplusplus, SiCsharp, SiScikitlearn, SiNumpy, SiFlask, SiTensorflow, SiJavascript, SiVisualstudiocode, SiMysql, SiPostgresql } from 'react-icons/si';
+import { SiC, SiCplusplus, SiCsharp, SiScikitlearn, SiNumpy, SiFlask, SiTensorflow, SiJavascript, SiVisualstudiocode, SiMysql, SiPostgresql, SiPytorch } from 'react-icons/si';
 import { useInView } from 'react-intersection-observer';
 import { SiAmazonaws, SiDocker } from 'react-icons/si';
 import '../Skillssec/skills.css'; // Ensure correct path
@@ -26,7 +26,8 @@ const skills = [
     { name: 'SQL', icon: <SiMysql />, color: '#4479A1' },
     { name: 'PostgreSQL', icon: <SiPostgresql/>, color: '#E34F26'},
     { name: 'Docker', icon: <SiDocker/>, color: '#0db7ed'},
-    { name: 'AWS', icon: <SiAmazonaws/>, color: '#FF9900'}
+    { name: 'AWS', icon: <SiAmazonaws/>, color: '#FF9900'},
+    { name: 'PyTorch', icon: <SiPytorch/>, color: '#F7DF1E'}
 
 
 ];

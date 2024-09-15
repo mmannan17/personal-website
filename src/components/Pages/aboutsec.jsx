@@ -66,7 +66,7 @@ const AboutAndSkills = () => {
                     <h1>About Me</h1>
                 </header>
                 <div className="about-text">
-                    <p>Welcome to my personal portfolio. I'm excited to share my work and experiences with you. Here’s a glimpse into my journey..</p>
+                    <p>Welcome to my personal portfolio. I'm excited to share my work and experiences with you. Here’s a glimpse into my journey.</p>
                     <p>I've always been a huge soccer fan and I was at the 2022 World Cup which was the greatest experience of my life.</p>
                     <p>Other than that, I'm a Software Developer. I was born and raised in Qatar and moved to Florida 3 years ago to pursue a degree in Computer Science. I'm interested in AI, Cloud, and Full-Stack Development.</p>
                     <p>I've been programming for about 5 years now. I've always been around it though, as my older siblings introduced me to coding pretty early on.</p>
