@@ -30,7 +30,13 @@
 }
 
 
-
+@media (min-width: 1025px) and (max-width: 1440px) { /* Adjust range as needed */
+    .resume-logo {
+        width: 30px; /* Adjust size for laptops */
+        max-width: 40px;
+        padding-top: 0.5vw;
+    }
+}
 
 
 @media (max-width: 486px) {

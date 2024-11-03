@@ -1,7 +1,7 @@
 import React from 'react';
 import ExperienceCard from '../experience/experiencecard';
 import styles from '../experience/experience.module.css';
-import Karwa from '../images/karwa.png';
+import Jamaa from '../images/jamaa.png';
 import Nsbephone from '../images/nsbephone.png';
 import TKAILab from '../images/TKAI Lab.png';
 
@@ -10,12 +10,12 @@ const experiences = [
   {
     title: "AI/ML Research Assistant",
     company: "TKAI Lab",
-    period: "June 2024 - Present",
+    period: "May 2024 - Present",
     description: [
       "Conducting in-depth analysis of neural network stability, focusing on advanced architectures like RNNs, LSTMs, and Transformers to ensure robust performance under varying conditions.",
       "Applying higher-order methods such as regularization and adversarial training to improve stability and mitigate sensitivity to adversarial attacks, enhancing model security and reliability.",
-      "Developing a sophisticated visualization framework for Stack RNNs, enabling the tracking and interpretation of activations during CFL sequence processing for enhanced transparency and debugging.",
-      "Implementing rigorous cross-validation techniques to guarantee model stability and generalization across diverse datasets, ensuring consistent and reliable outputs in real-world scenarios.",
+      "Developing 4 novel recurrent architectures inspired by automata theory and designed for Lyapunov stability, addressinglongstanding issues of learnability and stability in neural networks to enhance performance and generalization.",
+      "Optimized Memory Augmented RNNs by visualizing activation functions, resulting in a 10% increase in push/pop predictionaccuracy. Achieving 10% increase in model stability.",
       "Optimizing neural architectures by reducing computational complexity through techniques like pruning and quantization, while maintaining high accuracy and efficiency for deployment in resource-constrained environments.",
       "Collaborating with research teams to drive innovation in neural network stability, leveraging insights from literature reviews and real-world applications to push the boundaries of model robustness."
   ],
@@ -26,18 +26,19 @@ const experiences = [
   },
 
   {
-    title: "Developer Intern",
-    company: "Mowasalat Karwa",
-    period: "05/22 - 08/22",
+    title: "Co-Founder & Full Stack Developer",
+    company: "Jamaa",
+    period: "December 2023 - Current",
     description: [
-      "Contributed to enhancing the Karwa app's bus schedule and notification system, working under the guidance of senior developers.",
-      "Assisted in refining the real-time notification features and user interface, improving the efficiency of the app and making it easier for users to receive timely bus schedule updates.",
-      "Supported in the development of the taxi booking component, including integrating features for booking, tracking, and managing taxi rides.",
-      "Involved in every cycle of the software development lifecycle (SDLC), from initial requirement gathering and analysis, through design, implementation, and testing, to deployment and maintenance.",
-      "Gained comprehensive experience in developing robust and user-centric applications, ensuring high standards of quality and performance.",
-      "Improved technical skills and understanding of the complete software development process and the importance of collaboration and continuous improvement in delivering successful software solutions."
+      "Led the development of a cross-platform mobile application with React Native and Django, creating an intuitive interface for users to connect with nearby mosques and events.",
+      "Optimized backend performance by implementing Redis caching and enhancing PostgreSQL queries, resulting in a 50% reduction in server load times.",
+      "Designed a location-based algorithm that suggests nearby mosques and events, reducing average response time from 200ms to 65ms for improved user experience. ",
+      "Deployed the application on AWS Elastic Beanstalk with Docker, achieving a robust infrastructure that supports 99.9% uptime.",
+      "Developed 25+ RESTful APIs to facilitate data exchange across features and implemented JWT-based authentication with role-based access for secure interactions.",
+      "Enhanced AI verification processes through computer vision, enabling automatic validation of mosque credentials and prayer schedules, which cut manual verification efforts by 60%.",
+      "Collaborated throughout the software development lifecycle (SDLC), from planning and design to implementation, testing, and deployment, ensuring a high-quality and user-focused product."
     ],
-    imageUrl: Karwa
+    imageUrl: Jamaa
   },
   {
     title: "Professional Development Chair",

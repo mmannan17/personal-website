@@ -27,7 +27,7 @@
     box-sizing: border-box; /* Includes padding and border in the width */
     bottom: -20px;
     background-color: black;
-    height: 85vh; /* Make the card shorter */
+    height: 105vh; /* Make the card shorter */
     overflow: hidden; /* Ensure content does not overflow */
 }
 
