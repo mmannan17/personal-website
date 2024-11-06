@@ -10,7 +10,7 @@ const experiences = [
   {
     title: "AI/ML Research Assistant",
     company: "TKAI Lab",
-    period: "May 2024 - Present",
+    period: "Ma 2024 - Present",
     description: [
       "Conducting in-depth analysis of neural network stability, focusing on advanced architectures like RNNs, LSTMs, and Transformers to ensure robust performance under varying conditions.",
       "Applying higher-order methods such as regularization and adversarial training to improve stability and mitigate sensitivity to adversarial attacks, enhancing model security and reliability.",
