@@ -30,7 +30,7 @@ const experiences = [
     company: "Jamaa",
     period: "December 2023 - Current",
     description: [
-      "Led the development of a cross-platform mobile application with React Native and Django, creating an intuitive interface for users to connect with nearby mosques and events.",
+      "Led the development of a recently acquired cross-platform mobile application with React Native and Django, creating an intuitive interface for users to connect with nearby mosques and events.",
       "Optimized backend performance by implementing Redis caching and enhancing PostgreSQL queries, resulting in a 50% reduction in server load times.",
       "Designed a location-based algorithm that suggests nearby mosques and events, reducing average response time from 200ms to 65ms for improved user experience. ",
       "Deployed the application on AWS Elastic Beanstalk with Docker, achieving a robust infrastructure that supports 99.9% uptime.",

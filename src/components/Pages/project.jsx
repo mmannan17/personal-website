@@ -1,20 +1,61 @@
 import React from 'react';
 import '../Projectsec/project.css';  // Importing custom CSS for styling
-import Qibimage from '../images/qibimage.png';
+import soccer from '../images/soccer.png';
 import Embauto from '../images/embauto.png';
-import Sbotify from '../images/Sbotify.webp';
+import fraud from '../images/Fraud.webp';
 import StockSmart from '../images/StockSmart.webp';
-import Qibimagetab from '../images/qibimagetab.png';
+import soccerm from '../images/soccerm.png';
 import Embautotab from '../images/embautotab.png';
-import Sbotifytab from '../images/Sbotifytab.webp';
+import fraudm from '../images/Fraudm.webp';
 import StockSmarttab from '../images/StockSmarttab.webp';
-import Qibimagephone from '../images/qibimagephone.png';
+import soccers from '../images/soccers.png';
 import Embautophone from '../images/embautophone.png';
-import Sbotifyphone from '../images/Sbotifyphone.webp';
+import frauds from '../images/Frauds.webp';
 import StockSmartphone from '../images/StockSmartphone.webp';
 import ProjectCarousel from '../Projectsec/projectcarousel';
 
 const projects = [
+    {
+        title: "Financial Fraud Detection",
+        description: (
+            <ul className="project-info financial-fraud">
+                <li><strong>Tech Stack:</strong> Python, PyTorch, GNN, Scikit-learn, PostgreSQL</li>
+                <li><strong>Git Repo Status:</strong> Private</li>
+                <li><strong>Project Purpose:</strong> Detects financial fraud by analyzing relationships and patterns in data using Graph Neural Networks (GNNs).</li>
+                <li><strong>Graph-Based Modeling:</strong> Structured transaction data as graphs to identify complex patterns indicative of fraudulent behavior.</li>
+                <li><strong>GNN Implementation:</strong> Developed and trained GNN models to improve fraud detection accuracy by 20% over traditional methods.</li>
+                <li><strong>Training Optimization:</strong> Utilized CUDA and hyperparameter tuning to optimize model training time.</li>
+                <li><strong>Results and Impact:</strong> Increased real-time fraud detection capabilities, reducing false positives and enhancing security for financial institutions.</li>
+            </ul>
+        ),
+        imageUrls: {
+            small: frauds,
+            medium: fraudm,
+            large: fraud
+        },
+        githubUrl: "https://github.com/mmannan17/Bot-features"
+    },
+    {
+        title: "Soccer Performance Insights: ML Approach",
+        description: (
+            <ul className="project-info soccer-performance">
+                <li><strong>Tech Stack:</strong> Python, TensorFlow, Pandas, Matplotlib, SQL</li>
+                <li><strong>Git Repo Status:</strong> Private</li>
+                <li><strong>Project Purpose:</strong> Provides insights into key soccer performance indicators for improved match strategies and player development.</li>
+                <li><strong>Data Processing:</strong> Cleaned and processed extensive match and player statistics datasets for ML model training.</li>
+                <li><strong>Feature Engineering:</strong> Applied feature selection and engineering techniques to enhance predictive accuracy.</li>
+                <li><strong>Visual Dashboard:</strong> Created dashboards displaying performance trends over time, aiding coaches and analysts.</li>
+                <li><strong>Results and Impact:</strong> Delivered actionable insights that informed strategic training and match preparation.</li>
+            </ul>
+        ),
+        imageUrls: {
+            small: soccers,
+            medium: soccerm,
+            large: soccer
+            
+        },
+        githubUrl: "https://github.com/mmannan17/appt_booker"
+    },
     {
         title: "Embassy Auto-Book",
         description: (
@@ -54,46 +95,7 @@ const projects = [
         },
         githubUrl: "https://github.com/mmannan17/StockSmart"
     },
-    {
-        title: "Sbotify Bot",
-        description: (
-            <ul>
-                <li><strong>Tech Stack:</strong> Python</li>
-                <li><strong>Git Repo Status: Private</strong></li>
-                <li><strong>Project Purpose:</strong> Enhances the Spotify experience on Discord by allowing playlist blending, adding songs, and providing detailed stats.</li>
-                <li><strong>OAuth2 Authentication:</strong> Secured user data with OAuth2 authentication, providing personalized and secure data access.</li>
-                <li><strong>Discord Bot Integration:</strong> Created a Discord bot that integrates with Spotify's API to enhance music-sharing experiences across more than 15 servers.</li>
-                <li><strong>User Feedback and Improvement:</strong> Refined the bot based on user feedback, improving its functionality and user experience, which led to a 20% increase in bot usage.</li>
-                <li><strong>Intuitive Bot Commands:</strong> Designed user-friendly commands for seamless interaction with the bot, making it simple to use.</li>
-            </ul>
-        ),
-        imageUrls: {
-            small: Sbotifyphone,
-            medium: Sbotifytab,
-            large: Sbotify
-        },
-        githubUrl: "https://github.com/mmannan17/Bot-features"
-    },
-    {
-        title: "Qibla Locator",
-        description: (
-            <ul>
-                <li><strong>Tech Stack:</strong> Flask, HTML, CSS, React.js</li>
-                <li><strong>Git Repo Status: Private</strong></li>
-                <li><strong>Project Purpose:</strong> Provides tools for Muslims to find the Qibla direction, prayer times, Quran translation, and prayer notifications.</li>
-                <li><strong>Qibla Direction Calculation:</strong> Implemented advanced algorithms to calculate the Qibla direction and integrated a lunar calendar system using Flask.</li>
-                <li><strong>Geolocation and RESTful API Integration:</strong> Utilized geographical coordinates from geolocation and RESTful API integration for accurate results.</li>
-                <li><strong>Real-Time Prayer Times:</strong> Incorporated algorithmic solutions for real-time, location-specific prayer times using astronomical data.</li>
-                <li><strong>User Interface:</strong> Designed a visually appealing and user-friendly interface, optimized for responsiveness.</li>
-            </ul>
-        ),
-        imageUrls: {
-            small: Qibimagephone,
-            medium: Qibimagetab,
-            large: Qibimage
-        },
-        githubUrl: "https://github.com/mmannan17/appt_booker"
-    }
+    
 ];
 
 function Project() {
