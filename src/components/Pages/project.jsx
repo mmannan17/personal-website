@@ -20,10 +20,10 @@ const projects = [
         description: (
             <ul className="project-info financial-fraud">
                 <li><strong>Tech Stack:</strong> Python, PyTorch, GNN, Scikit-learn, PostgreSQL</li>
-                <li><strong>Git Repo Status:</strong> Private</li>
+                <li><strong>Git Repo Status:</strong> Public</li>
                 <li><strong>Project Purpose:</strong> Detects financial fraud by analyzing relationships and patterns in data using Graph Neural Networks (GNNs).</li>
                 <li><strong>Graph-Based Modeling:</strong> Structured transaction data as graphs to identify complex patterns indicative of fraudulent behavior.</li>
-                <li><strong>GNN Implementation:</strong> Developed and trained GNN models to improve fraud detection accuracy by 20% over traditional methods.</li>
+                <li><strong>GNN Implementation:</strong> Developed and trained GNN models to train on the dataset and reached 97% accuracy on the test set.</li>
                 <li><strong>Training Optimization:</strong> Utilized CUDA and hyperparameter tuning to optimize model training time.</li>
                 <li><strong>Results and Impact:</strong> Increased real-time fraud detection capabilities, reducing false positives and enhancing security for financial institutions.</li>
             </ul>
@@ -33,7 +33,7 @@ const projects = [
             medium: fraudm,
             large: fraud
         },
-        githubUrl: "https://github.com/mmannan17/Bot-features"
+        githubUrl: "https://github.com/mmannan17/Financial_Fraud_DetectionGNN"
     },
     {
         title: "Soccer Performance Insights: ML Approach",
