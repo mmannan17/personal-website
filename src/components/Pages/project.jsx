@@ -1,20 +1,42 @@
 import React from 'react';
 import '../Projectsec/project.css';  // Importing custom CSS for styling
-import soccer from '../images/soccer.png';
+import aiBuddySmall from '../images/aiBuddySmall.png';
 import Embauto from '../images/embauto.png';
 import fraud from '../images/Fraud.webp';
 import StockSmart from '../images/StockSmart.webp';
-import soccerm from '../images/soccerm.png';
+import aiBuddyMedium from '../images/aiBuddyMedium.png';
 import Embautotab from '../images/embautotab.png';
 import fraudm from '../images/Fraudm.webp';
 import StockSmarttab from '../images/StockSmarttab.webp';
-import soccers from '../images/soccers.png';
+import aiBuddyLarge from '../images/aibuddyLarge.png';
 import Embautophone from '../images/embautophone.png';
 import frauds from '../images/Frauds.webp';
 import StockSmartphone from '../images/StockSmartphone.webp';
 import ProjectCarousel from '../Projectsec/projectcarousel';
 
 const projects = [
+    {
+        title: "Fantasy Premier League AI Buddy",
+        description: (
+            <ul className="project-info fpl-ai-buddy">
+                <li><strong>Tech Stack:</strong> React, PyTorch, FastAPI, Azure</li>
+                <li><strong>Git Repo Status:</strong> Public</li>
+                <li><strong>Project Purpose:</strong> Provides Fantasy Premier League enthusiasts with AI-driven insights for team optimization and performance prediction.</li>
+                <li><strong>AI Buddy:</strong> Developed an AI assistant that offers personalized recommendations and insights based on user preferences and historical data.</li>
+                <li><strong>Prediction Points:</strong> Utilized advanced statistical models to predict player performance and potential points, enhancing decision-making for team selection.</li>
+                <li><strong>Optimal Team Selection:</strong> Implemented Monte Carlo simulations and statistical data analysis to suggest the best team composition for maximizing points.</li>
+                <li><strong>Visual Dashboard:</strong> Created interactive dashboards to visualize player statistics, team performance, and AI recommendations.</li>
+                <li><strong>Azure Integration:</strong> Leveraged Azure for scalable cloud computing and data storage solutions, ensuring efficient processing and availability of AI models.</li>
+                <li><strong>Results and Impact:</strong> Improved user engagement and strategic decision-making by providing actionable insights and data-driven recommendations.</li>
+            </ul>
+        ),
+        imageUrls: {
+            small: aiBuddySmall,
+            medium: aiBuddyMedium,
+            large: aiBuddyLarge
+        },
+        githubUrl: "https://fpl-hero.netlify.app"
+    },
     {
         title: "Financial Fraud Detection",
         description: (
@@ -36,25 +58,23 @@ const projects = [
         githubUrl: "https://github.com/mmannan17/Financial_Fraud_DetectionGNN"
     },
     {
-        title: "Soccer Performance Insights: ML Approach",
+        title: "StockSmart",
         description: (
-            <ul className="project-info soccer-performance">
-                <li><strong>Tech Stack:</strong> Python, TensorFlow, Pandas, Matplotlib, SQL</li>
-                <li><strong>Git Repo Status:</strong> Private</li>
-                <li><strong>Project Purpose:</strong> Provides insights into key soccer performance indicators for improved match strategies and player development.</li>
-                <li><strong>Data Processing:</strong> Cleaned and processed extensive match and player statistics datasets for ML model training.</li>
-                <li><strong>Feature Engineering:</strong> Applied feature selection and engineering techniques to enhance predictive accuracy.</li>
-                <li><strong>Visual Dashboard:</strong> Created dashboards displaying performance trends over time, aiding coaches and analysts.</li>
-                <li><strong>Results and Impact:</strong> Delivered actionable insights that informed strategic training and match preparation.</li>
+            <ul>
+                <li><strong>Tech Stack:</strong> C#</li>
+                <li><strong>Git Repo Status: Public</strong></li>
+                <li><strong>Project Purpose:</strong> A tool for identifying key market patterns and trends to inform investment decisions.</li>
+                <li><strong>Data Visualization and Pattern Recognition:</strong> Developed advanced data visualization techniques and pattern recognition algorithms to identify key market trends and patterns.</li>
+                <li><strong>File Handling with C#:</strong> Implemented file handling capabilities in C# for accurate data extraction from CSV files.</li>
+                <li><strong>OOP for Modular Architecture:</strong> Leveraged Object-Oriented Programming (OOP) principles to create a modular code architecture, encapsulating data in classes for enhanced maintainability.</li>
             </ul>
         ),
         imageUrls: {
-            small: soccers,
-            medium: soccerm,
-            large: soccer
-            
+            small: StockSmartphone,
+            medium: StockSmarttab,
+            large: StockSmart
         },
-        githubUrl: "https://github.com/mmannan17/appt_booker"
+        githubUrl: "https://github.com/mmannan17/StockSmart"
     },
     {
         title: "Embassy Auto-Book",
@@ -75,25 +95,6 @@ const projects = [
             large: Embauto
         },
         githubUrl: "https://github.com/mmannan17/Appointment_booker"
-    },
-    {
-        title: "StockSmart",
-        description: (
-            <ul>
-                <li><strong>Tech Stack:</strong> C#</li>
-                <li><strong>Git Repo Status: Public</strong></li>
-                <li><strong>Project Purpose:</strong> A tool for identifying key market patterns and trends to inform investment decisions.</li>
-                <li><strong>Data Visualization and Pattern Recognition:</strong> Developed advanced data visualization techniques and pattern recognition algorithms to identify key market trends and patterns.</li>
-                <li><strong>File Handling with C#:</strong> Implemented file handling capabilities in C# for accurate data extraction from CSV files.</li>
-                <li><strong>OOP for Modular Architecture:</strong> Leveraged Object-Oriented Programming (OOP) principles to create a modular code architecture, encapsulating data in classes for enhanced maintainability.</li>
-            </ul>
-        ),
-        imageUrls: {
-            small: StockSmartphone,
-            medium: StockSmarttab,
-            large: StockSmart
-        },
-        githubUrl: "https://github.com/mmannan17/StockSmart"
     },
     
 ];
