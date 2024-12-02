@@ -41,7 +41,7 @@ const projects = [
         title: "Financial Fraud Detection",
         description: (
             <ul className="project-info financial-fraud">
-                <li><strong>Tech Stack:</strong> Python, PyTorch, GNN, Scikit-learn, PostgreSQL</li>
+                <li><strong>Tech Stack:</strong> PyTorch</li>
                 <li><strong>Git Repo Status:</strong> Public</li>
                 <li><strong>Project Purpose:</strong> Detects financial fraud by analyzing relationships and patterns in data using Graph Neural Networks (GNNs).</li>
                 <li><strong>Graph-Based Modeling:</strong> Structured transaction data as graphs to identify complex patterns indicative of fraudulent behavior.</li>
