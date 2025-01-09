@@ -35,7 +35,7 @@ const experiences = [
       "Designed a location-based algorithm that suggests nearby mosques and events, reducing average response time from 200ms to 65ms for improved user experience. ",
       "Deployed the application on AWS Elastic Beanstalk with Docker, achieving a robust infrastructure that supports 99.9% uptime.",
       "Developed 25+ RESTful APIs to facilitate data exchange across features and implemented JWT-based authentication with role-based access for secure interactions.",
-      "Enhanced AI verification processes through genAI utilizing LLM's as judges to parse legal documents, enabling automatic validation of mosque credentials and prayer schedules, which cut manual verification efforts by 60%.",
+      "Enhanced AI verification processes through GenAI by leveraging LLMs to parse and evaluate legal documents, enabling automated validation of mosque credentials and prayer schedules",
       "Collaborated throughout the software development lifecycle (SDLC), from planning and design to implementation, testing, and deployment, ensuring a high-quality and user-focused product."
     ],
     imageUrl: Jamaa
